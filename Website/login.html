@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Campaign Quest</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Design.css">
+    </head>
+    <style>
+        body{
+            background-image: url(Resources/paperboard-yellow-texture.jpg);
+        }
+    </style><!--Image by efe_madrid</a> on Freepik-->
+     <body>
+        <div class="header">
+            <h1>Campaign Quest</h1>
+        </div>
+        <div class="navbar">
+            <a href="index.html">Home Page</a>
+           <!-- <a href="books.html">Books</a> Any User -->
+            <a href="Homebrew.html">Homebrew</a> <!-- Any User -->
+            <a href="createchar.html">Character Creation</a> <!-- Login User Only -->
+            <a href="campaign.html">Settings</a> <!-- Login User Only -->
+            <a href="groups.html">Groups</a> <!-- Login User Only -->
+            <a href="signin.html" class="right">Login/Sign-up</a>
+        </div>
+
+        <?php include 'header.php'; ?>
+        <div class="container mt-3">
+            <h2>Sign In</h2>
+            <form name="signin" action="signinAction.php" method="post">
+                <div class="mb-3 mt-3">
+                    <label for="user">Username:</label>
+                        <input type="text" class="form-control" placeholder="Enter username" name="user">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" placeholder="Enter password" name="pwd">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <a href="forgotpwd.php">Forgot Password</a>
+        </div>
+     </body>
+</html>
