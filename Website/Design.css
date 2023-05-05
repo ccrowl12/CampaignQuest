@@ -70,7 +70,18 @@ button {
   margin: 4px 2px;
   cursor: pointer;
 }
-
+.container mt-3{
+  text-align: center;
+  font-family: serif;
+}
+.mb-3{
+  text-align: center;
+  font-family: serif;
+  font-size: large;
+}
+.btn-primary{
+  text-align: center;
+}
 
 /* 
     Created on : Mar 29, 2023, 11:23:54 AM
