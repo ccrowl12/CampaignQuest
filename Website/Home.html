@@ -5,11 +5,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Design.css">
+        <script src="data.js"></script>
     </head>
     <style>
         body{
-            background-image: url(Resources/paperboard-yellow-texture.jpg);
+            background-image: url(Resources/paperboard-yellow-texture.jpg); 
         }
+        a 
+        {
+                text-decoration: none;
+                color: black;
+        }         
     </style><!--Image by efe_madrid</a> on Freepik-->
     
     <body>
@@ -17,13 +23,56 @@
             <h1>Campaign Quest</h1>
         </div>
         <div class="navbar">
-            <a href="index.html">Home Page</a>
+            <a href="Home.html">Home Page</a>
            <!-- <a href="books.html">Books</a> Any User -->
             <a href="Homebrew.html">Homebrew</a> <!-- Any User -->
             <a href="createchar.html">Character Creation</a> <!-- Login User Only -->
             <a href="campaign.html">Settings</a> <!-- Login User Only -->
             <a href="groups.html">Groups</a> <!-- Login User Only -->
+            <a href="Forum.html">Forums</a> <!-- Login User Only -->
             <a href="signin.html" class="right">Login/Sign-up</a>
         </div>
+
+        <div class="top-bar">
+            <h1>
+                Message Board
+            </h1>
+        </div>
+        <div class="main">
+            <ol>
+            </ol>
+            <textarea></textarea>
+        <div class="button-container">
+            <button>Create a New Thread</button>
+        </div>
+        </div>
+        
+        <script>
+            console.log(threads);
+            var container = document.querySelector('ol');
+            for (let thread of threads) 
+            {
+                var html = 
+                `
+                <li class="row">
+                    <a href="/thread.html?${thread.id}">
+                        <h4 class="title">
+                            ${thread.title}
+                        </h4>
+                        <div class="bottom">
+                            <p class="timestamp">
+                                ${new Date(thread.date).toLocaleString()}
+                            </p>
+                            <p class="comment-count">
+                                ${thread.comments.length} comments
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                `
+                container.insertAdjacentHTML('beforeend', html);
+            }
+        </script>
+        
     </body>
 </html>

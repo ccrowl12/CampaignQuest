@@ -24,7 +24,7 @@ if (gettype($result) == "object") {
     session_start();
     $_SESSION['id'] = " ". $firstname." ".$lastname." Username: ".$user." Package Plan: ".$registerID;
     
-    header("Location:welcome.php");
+    header("Home.html");
     exit;
   } else
     echo "Login Failed";
